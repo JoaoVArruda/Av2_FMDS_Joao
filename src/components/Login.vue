@@ -1,6 +1,6 @@
 <template>
     <v-app-bar>
-        <v-app-bar-title>FMDS-Aula 10</v-app-bar-title>
+        <v-app-bar-title>Gerenciador de Anotações</v-app-bar-title>
         <v-spacer />
         
         <span class="mr-3">
