@@ -19,7 +19,7 @@
         <v-card-text>
           <v-text-field v-model="note.title" label="Titulo" />
           <v-text-field v-model="note.text" label="Anotação" />
-          <v-btn block @click="addnote">Adicionar</v-btn>
+          <v-btn block @click="addNote">Adicionar</v-btn>
           <v-list>
             <v-skeleton-loader type="list-item-two-line" v-if="loading" />
             <v-list-item v-else v-for="note in notes" :key="note.id">
@@ -81,7 +81,7 @@ const noteDelete = async (id) => {
   await deleteDoc(doc(notesCollection, id))
 }
 
-const addnote = async () => {
+const addNote = async () => {
   await addDoc(notesCollection, { ...note.value })
   note.value = {}
 }
